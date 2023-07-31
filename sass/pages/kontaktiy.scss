@@ -1,0 +1,127 @@
+@use "../global";
+@use "../utils/mixins" as mxn;
+@use "../utils/variables" as var;
+
+.contuct {
+  background-color: #fbf8ec;
+  .links {
+    padding-top: 127px;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s;
+    a {
+      color: #8f8f8f;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.2);
+        color: #48b648;
+      }
+    }
+    &:hover {
+      color: #48b648;
+      transform: translateX(20px);
+    }
+  }
+  h2 {
+    margin-bottom: 40px;
+    color: #414141;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    max-width: 1208px;
+  }
+  .contuct__wrapper {
+    padding-bottom: 80px;
+    display: flex;
+    gap: 60px;
+    .contuct__card {
+      .card_top {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      h3 {
+        margin-left: 28px;
+        color: #414141;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        text-decoration-line: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .contuct__wrapper {
+    flex-direction: column;
+    text-align: center;
+    .card_top {
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}
+
+.shop {
+  background-color: #fbf8ec;
+
+  h2 {
+    margin-bottom: 40px;
+    color: #414141;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .nav-pills {
+    margin-bottom: 34px;
+    gap: 18px;
+    .nav-item {
+      a {
+        color: #606060;
+        background-color: #f3f2f1;
+      }
+      a:active {
+        background-color: #48b648;
+        color: #fff;
+      }
+    }
+  }
+  .shop__wrapper {
+    padding-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    .shop__card {
+      .shop_top {
+        margin-top: 11px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        p {
+          margin-top: 9px;
+        }
+      }
+    }
+  }
+  iframe {
+    margin-bottom: 80px;
+  }
+}
+.nav-item:first-child a {
+  background-color: #48b648 !important;
+  color: #fff !important;
+}
+.nav-item:first-child a:active {
+  background-color: #48b648;
+}
+
+@media (max-width: 870px) {
+  // .shop__wrapper {
+  //   flex-direction: column;
+  // }
+}
