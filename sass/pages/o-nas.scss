@@ -1,0 +1,129 @@
+@use "../global";
+@use "../utils/mixins" as mxn;
+@use "../utils/variables" as var;
+
+.about {
+  background-image: url(../../images/about/about-bg-img.svg);
+  background-color: #fbf8ec;
+  .links {
+    padding-top: 127px;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s;
+    a {
+      color: #8f8f8f;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.2);
+        color: #48b648;
+      }
+    }
+    &:hover {
+      color: #48b648;
+      transform: translateX(20px);
+    }
+  }
+
+  .about__wrapper {
+    display: flex;
+    h1 {
+      margin-top: 47px;
+      color: #414141;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 700;
+      max-width: 1208px;
+    }
+    p {
+      margin-bottom: 96px;
+      margin-top: 16px;
+      color: #f63;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+      max-width: 669px;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width: 995px) {
+  .about__wrapper {
+    flex-direction: column;
+    h1 {
+    }
+  }
+}
+
+.info {
+  padding-top: 120px;
+  background-color: #fbf8ec;
+  .info__wrapper {
+    display: flex;
+    .info__cards {
+      margin-left: 75px;
+      p {
+        margin-bottom: 16px;
+        color: #414141;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+      }
+      h3 {
+        color: #414141;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+      }
+    }
+  }
+}
+@media (max-width: 860px) {
+  .info__wrapper {
+    flex-direction: column;
+    .info__cards {
+      margin-bottom: 37px;
+    }
+  }
+}
+
+.thank {
+  background-color: #fbf8ec;
+  .thank__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    img {
+      width: 113px;
+      height: 92px;
+    }
+    .thank__bside {
+      padding: 40px 50px;
+      border-radius: 8px;
+      background-image: url(https://e-commers-severyanochka-demo.netlify.app/assets/images/about-us/thanks-bg.png) ;
+      p {
+        color: #70c05b;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+@media (max-width: 780px){
+   .thank__wrapper{
+    flex-direction: column;
+    justify-content: center;
+    .thank__img{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+   }
+}
