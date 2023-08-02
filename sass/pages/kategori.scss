@@ -1,0 +1,77 @@
+@use "../global";
+@use "../utils/mixins" as mxn;
+@use "../utils/variables" as var;
+
+.catalog {
+  background-color: #fbf8ec;
+  .links {
+    padding-top: 127px;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s;
+    a {
+      color: #8f8f8f;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.2);
+        color: #48b648;
+      }
+    }
+    &:hover {
+      color: #48b648;
+      transform: translateX(20px);
+    }
+  }
+  h2 {
+    margin: 24px 0px 60px;
+    color: #414141;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .catolog__wrapper {
+    margin-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    .catolog_card {
+      position: relative;
+      box-shadow: 1px 2px 4px rgba(112, 192, 91, 0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: 0.3s ease-out;
+      cursor: pointer;
+      img {
+        width: 100%;
+        transition: 0.5s;
+      }
+      h3 {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        color: #fff;
+        z-index: 1;
+      }
+      .color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(112, 192, 91, 0) 0%,
+          #70c05b 82.81%
+        );
+        transition: 0.3s ease-out;
+      }
+    }
+  }
+}
+.catolog_card:hover img{
+  transform: scale(1.3)
+}
